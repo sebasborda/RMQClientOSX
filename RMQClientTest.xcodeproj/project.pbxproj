@@ -11,9 +11,13 @@
 		3EAE694D228601F700E89AB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE694C228601F700E89AB5 /* ViewController.swift */; };
 		3EAE694F228601F700E89AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAE694E228601F700E89AB5 /* Assets.xcassets */; };
 		3EAE6952228601F700E89AB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EAE6950228601F700E89AB5 /* Main.storyboard */; };
+		B23307963C99951A1D5691D6 /* libPods-RMQClientTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3796B4860F7D56C6FAF2ECD5 /* libPods-RMQClientTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0841D440ECCE8EB9C7A2A782 /* Pods-RMQClientTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMQClientTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RMQClientTest/Pods-RMQClientTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3796B4860F7D56C6FAF2ECD5 /* libPods-RMQClientTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMQClientTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AC218941CB1320EC3E3553C /* Pods-RMQClientTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMQClientTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RMQClientTest/Pods-RMQClientTest.release.xcconfig"; sourceTree = "<group>"; };
 		3EAE6947228601F700E89AB5 /* RMQClientTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMQClientTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAE694A228601F700E89AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EAE694C228601F700E89AB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23307963C99951A1D5691D6 /* libPods-RMQClientTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,8 @@
 			children = (
 				3EAE6949228601F700E89AB5 /* RMQClientTest */,
 				3EAE6948228601F700E89AB5 /* Products */,
+				D16C011AF18B6650452E542C /* Pods */,
+				A08FA8315F36192206A0261B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +70,23 @@
 			path = RMQClientTest;
 			sourceTree = "<group>";
 		};
+		A08FA8315F36192206A0261B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3796B4860F7D56C6FAF2ECD5 /* libPods-RMQClientTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D16C011AF18B6650452E542C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0841D440ECCE8EB9C7A2A782 /* Pods-RMQClientTest.debug.xcconfig */,
+				3AC218941CB1320EC3E3553C /* Pods-RMQClientTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,6 +94,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EAE6957228601F700E89AB5 /* Build configuration list for PBXNativeTarget "RMQClientTest" */;
 			buildPhases = (
+				28661911A69FA5F9A92FC682 /* [CP] Check Pods Manifest.lock */,
 				3EAE6943228601F700E89AB5 /* Sources */,
 				3EAE6944228601F700E89AB5 /* Frameworks */,
 				3EAE6945228601F700E89AB5 /* Resources */,
@@ -127,6 +152,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28661911A69FA5F9A92FC682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RMQClientTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EAE6943228601F700E89AB5 /* Sources */ = {
@@ -269,6 +319,7 @@
 		};
 		3EAE6958228601F700E89AB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0841D440ECCE8EB9C7A2A782 /* Pods-RMQClientTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RMQClientTest/RMQClientTest.entitlements;
@@ -287,6 +338,7 @@
 		};
 		3EAE6959228601F700E89AB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AC218941CB1320EC3E3553C /* Pods-RMQClientTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RMQClientTest/RMQClientTest.entitlements;
