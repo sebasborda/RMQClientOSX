@@ -1,0 +1,33 @@
+PODS:
+  - CocoaAsyncSocket (7.6.3)
+  - JKVValue (1.3.3)
+  - RMQClient (0.11.0-rc2):
+    - CocoaAsyncSocket (~> 7.6.3)
+    - JKVValue (~> 1.3.3)
+
+DEPENDENCIES:
+  - RMQClient (from `https://github.com/rabbitmq/rabbitmq-objc-client.git`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaAsyncSocket
+    - JKVValue
+
+EXTERNAL SOURCES:
+  RMQClient:
+    :branch: master
+    :git: https://github.com/rabbitmq/rabbitmq-objc-client.git
+
+CHECKOUT OPTIONS:
+  RMQClient:
+    :commit: 9bee6f006c7e443bd5059b4ff8134a6243f18798
+    :git: https://github.com/rabbitmq/rabbitmq-objc-client.git
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  JKVValue: d7941071b1cf9ba35c194fd40bcf4c4d9b5462e9
+  RMQClient: 8dba55c6a51c7041122d929e2f9224e22f5989db
+
+PODFILE CHECKSUM: bcbfcccf7140f80364e68847e53ca8a8ca0659f7
+
+COCOAPODS: 1.5.3
